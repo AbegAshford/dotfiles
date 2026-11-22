@@ -13,7 +13,7 @@ QT_QPA_PLATFORMTHEME = "qtengine"
 files = []
 
 [include.optional]
-files = ["noctalia.toml"]
+files = ["cursor.toml", "noctalia.toml"]
 
 # Effects presets (also go in [include].files), e.g.:
 #   "/usr/share/umbriel/effects/border/pulse/effect.toml"
@@ -52,7 +52,8 @@ mode = "1920x1080@100"
 # sdr_transfer = "gamma22"
 # color_profile = "edid"
 # sdr_gamut = "srgb"
-
+workspaces = "dynamic"
+min_workspaces = 5
 # ==============================================================================
 # Input
 # ==============================================================================
@@ -63,7 +64,9 @@ numlock_toggle = true
 layout = "us,gb,ru,ru"
 variant = ",,,phonetic"
 options = "grp:alt_shift_toggle"   # Alt+Shift cycles layouts
-
+[input.cursor]
+# cursor plugin: theme = "Bibata-Material-Blush"
+# cursor plugin: size = 24
 # [input.focus]
 # follows_mouse = "sloppy"   # "off", "sloppy", "always"
 # hover_raises = false
@@ -141,7 +144,7 @@ default_extent_fraction = 0.5
 [keybinds]
 
 # --- Apps & session
-"Mod+Return" = { action = "spawn kitty", repeat = false }
+"Mod+Return" = { action = "spawn foot", repeat = false }
 "Mod" = "spawn noctalia msg panel-toggle launcher"
 "Mod+Q" = { action = "window-close", repeat = false }
 "Mod+Escape" = "session-quit"
